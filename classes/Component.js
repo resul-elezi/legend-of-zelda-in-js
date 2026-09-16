@@ -31,6 +31,7 @@ class SpriteComponent extends Component {
     constructor(componentType, componentObj) {
         super(componentType);
         this.sprite = new Image();
+        this.sprite.src = componentObj.path;// diese auch eingefuegt
         this.path = componentObj.path;
         this.srcRect = componentObj.srcRect;
     }

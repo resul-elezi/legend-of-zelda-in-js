@@ -32,18 +32,20 @@ class RenderSystem extends System {
     }
 
     update = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // aus der schleife verschoben da es nach jedem update einmal erneuert wird
 
         for (let i = 0; i < this.entities.length; i++) {
 
-            const { Position } = this.entities[i].components;
+            const { Position, Sprite } = this.entities[i].components; // Sprite eingefuegt
             const { x, y, width, height } = Position;
+            const { sprite, srcRect, path } = Sprite; // auf nicht auf dem Template
 
 
 
-            ctx.clearRect(0, 0, canvas.width, canvas.height)
             ctx.beginPath();
-            ctx.fillStyle = 'red';
-            ctx.fillRect(x, y, width, height);
+            // ctx.fillStyle = 'red';
+            // ctx.fillRect(x, y, width, height);
+            ctx.drawImage()
             ctx.stroke();
 
         }

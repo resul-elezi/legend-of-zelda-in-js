@@ -59,7 +59,7 @@ class Game {
 
         this.registry.addEntityToSystem(this.player)
 
-        // console.log(this.registry.systems);
+        console.log(this.player);
 
         document.addEventListener('keyup', this.handleUserInput);
         document.addEventListener('keydown', this.handleUserInput);
