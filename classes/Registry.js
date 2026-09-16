@@ -28,7 +28,7 @@ class Registry {
                     newEntityComponents['Movement'] = new MovementComponent(component['name'], componentObj);
                     break;
                 }
-                case 'Sprite': {
+                case 'Sprite': { // diesen Code im template einfuegen
                     const componentObj = component['value'];
                     newEntityComponents['Sprite'] = new SpriteComponent(component['name'], componentObj);
                     break;

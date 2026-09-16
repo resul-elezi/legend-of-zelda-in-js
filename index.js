@@ -42,7 +42,20 @@ class Game {
             }
         };
 
-        this.player = this.registry.createEntity([dummyMovementComponent, dummyPositionComponent]);
+        const dummySpriteComponent = { // diesen Code im template einfuegen vielleicht nur auskommentiert
+            name: 'Sprite',
+            value: {
+                path: './assets/link.png',
+                srcRect: {
+                    x: 58,
+                    y: -1,
+                    width: 19,
+                    height: 19
+                }
+            }
+        }
+
+        this.player = this.registry.createEntity([dummyMovementComponent, dummyPositionComponent, dummySpriteComponent]);
 
         this.registry.addEntityToSystem(this.player)
 
