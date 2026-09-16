@@ -26,4 +26,14 @@ class MovementComponent extends Component {
     }
 }
 
-export { MovementComponent, PositionComponent };
+// diesen Code im template einfuegen
+class SpriteComponent extends Component {
+    constructor(componentType, componentObj) {
+        super(componentType);
+        this.sprite = new Image();
+        this.path = componentObj.path;
+        this.srcRect = componentObj.srcRect;
+    }
+}
+
+export { MovementComponent, PositionComponent, SpriteComponent }; // und hier SpriteComponent auch nicht vergessen
